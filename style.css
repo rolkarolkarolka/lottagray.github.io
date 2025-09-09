@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+  background: black;
+  overflow: hidden;
+  z-index: -1;
+}
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: twinkle 2s infinite alternate;
+}
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(1); }
+  to   { opacity: 1; transform: scale(1.3); }
+}
+header {
+  background: linear-gradient(to right, #0033cc, #3366ff);
+  color: #ffff99;
+  text-align: center;
+  font-size: 2.5em;
+  padding: 15px;
+  text-shadow: 0 0 8px #fff, 0 0 12px #ffff66;
+  border-bottom: 4px solid yellow;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+nav {
+  width: 200px;
+  background: #0044cc;
+  padding: 15px;
+  color: white;
+}
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: bold;
+}
+nav a:hover {
+  color: yellow;
+  text-shadow: 0 0 5px #fff;
+}
+main {
+  flex: 1;
+  background: #fffaa0;
+  color: black;
+  padding: 20px;
+}
+h1, h2 {
+  margin-top: 0;
+}
